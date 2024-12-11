@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QUER ENCONTRAR O TRON?</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Logo -->
+    <img src="img/logo.png" alt="Logo" class="logo">
+    <!-- Título -->
+    <h1>Encontre as lojas mais próximas de você!</h1>
+    <!-- Formulário -->
+    <form id="locationForm">
+      <label for="region">Selecione seu bairro:</label>
+      <select id="region" required>
+        <option value="" disabled selected>Escolha seu bairro</option>
+        <!-- ZONA OESTE -->
+        <option value="-22.8893,-43.3867">Barra da Tijuca</option>
+        <option value="-22.9516,-43.3621">Recreio dos Bandeirantes</option>
+        <option value="-22.8784,-43.4887">Jacarepaguá</option>
+        <option value="-22.9742,-43.4762">Guaratiba</option>
+        <option value="-22.8883,-43.4692">Campo Grande</option>
+        <option value="-22.9512,-43.4824">Paciência</option>
+        <option value="-22.9241,-43.6852">Santa Cruz</option>
+
+        <!-- ZONA NORTE -->
+        <option value="-22.8801,-43.2247">Tijuca</option>
+        <option value="-22.8770,-43.2433">Méier</option>
+        <option value="-22.8729,-43.2746">Madureira</option>
+        <option value="-22.7467,-43.2964">Cachambi</option>
+        <option value="-22.8034,-43.2768">Penha</option>
+        <option value="-22.8307,-43.2953">Vila Isabel</option>
+
+        <!-- BAIXADA FLUMINENSE -->
+        <option value="-22.7942,-43.3988">Nova Iguaçu</option>
+        <option value="-22.8072,-43.4503">Duque de Caxias</option>
+        <option value="-22.7105,-43.4926">São João de Meriti</option>
+        <option value="-22.7636,-43.5344">Nilópolis</option>
+        <option value="-22.8739,-43.4705">Belford Roxo</option>
+        <option value="-22.8780,-43.4647">Mesquita</option>
+      </select>
+      <button type="submit">Buscar Lojas</button>
+    </form>
+    <button type="button" id="useCurrentLocation">Utilizar sua localização atual</button>
+    <div id="results"></div>
+  </div>
+  <footer>
+    <p>&copy; 2024 Tron Localizador. Todos os direitos reservados.</p>
+  </footer>
+  <script src="script.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCmZk6N7Al92ZZtnL1bbHZAXxov78zpQPs&callback=initMap"></script>
+</body>
+</html>
